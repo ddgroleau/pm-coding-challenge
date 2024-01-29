@@ -1,0 +1,22 @@
+﻿{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WebApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/organization-summaries": {
+      "get": {
+        "tags": [
+          "OrganizationSummary"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}
