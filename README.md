@@ -37,10 +37,10 @@ docker run -d -p 5000:80 --name pm-coding-challenge pm-coding-challenge
 1. Make a GET request to the `/api/organization-summaries` endpoint:
 
 ```bash
-curl http://localhost:5073/api/organization-summaries
+curl http://localhost:5000/api/organization-summaries
 ```
 
-2. Alternatively, navigate to `http://localhost:5073/swagger/index.html` to send a GET request via the Swagger UI.
+2. Alternatively, navigate to `http://localhost:5000/swagger/index.html` to send a GET request via the Swagger UI.
 
 ## Running the tests
 
