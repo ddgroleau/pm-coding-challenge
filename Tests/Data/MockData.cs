@@ -1,7 +1,7 @@
 ﻿using System.Text.Json;
 using Application.Dto;
 
-namespace TestProject1.Data;
+namespace Tests.Data;
 
 public class MockData
 {

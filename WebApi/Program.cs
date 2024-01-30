@@ -33,5 +33,5 @@ app.MapHealthChecks("/health");
 
 app.Run();
 
-// Expose partial class for End-to-End Tests
+// Expose partial class for Integration Tests
 public partial class Program { }

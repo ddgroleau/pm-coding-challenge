@@ -2,7 +2,7 @@
 using Application.Interfaces;
 using Application.Services;
 using Moq;
-using TestProject1.Data;
+using Tests.Data;
 
 namespace Tests.Unit;
 
@@ -54,7 +54,7 @@ public class OrganizationSummaryServiceTests
 
         _mockProvider.Setup(m => m.GetExternalData())
             .ReturnsAsync(() => OrganizationSummaryDto.Create(
-                mockOrgs,
+                mockOrgs!,
                 MockData.MockUserDtos(),
                 MockData.MockPhoneDtos()));
 
@@ -68,6 +68,6 @@ public class OrganizationSummaryServiceTests
         _mockProvider.Setup(m => m.GetExternalData())
             .ThrowsAsync(new HttpRequestException());
 
-        Assert.ThrowsAsync<HttpRequestException>(_organizationSummary.GetAllSummaries);
+        await Assert.ThrowsAsync<HttpRequestException>(_organizationSummary.GetAllSummaries);
     }
 }

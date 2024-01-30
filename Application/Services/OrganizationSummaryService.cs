@@ -18,7 +18,7 @@ public class OrganizationSummaryService : IOrganizationSummaryService
     {
         var data = await _externalData.GetExternalData();
 
-        if(data is null || !(data.Organizations?.Any() ?? false))
+        if(!(data?.Organizations?.Any() ?? false))
             return Enumerable.Empty<OrganizationSummary>();
         
         return data.Organizations.Select(org =>
